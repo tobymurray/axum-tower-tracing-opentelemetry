@@ -1,0 +1,17 @@
+[package]
+name = "axum-picklist"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "*", features = ["tracing"] }
+opentelemetry = { version = "*", features = ["rt-tokio"] }
+opentelemetry-otlp = { version = "*", features = ["http-proto", "reqwest-client", "tokio"] }
+opentelemetry-semantic-conventions = "*"
+reqwest = { version = "*" }
+tokio = { version = "*", features = ["full"] }
+tower = "*"
+tower-http = { version = "*", features = ["trace"] }
+tracing = "*"
+tracing-opentelemetry = "*"
+tracing-subscriber = "*"
